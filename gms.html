@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/games.css">
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
+        
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFE26JMWNJ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PFE26JMWNJ');
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js"></script>
+        <title>krypton - Games</title>
+    </head>
+    <body>
+        <div class="topbar">
+            <nav class="navbar" id="navbar">
+                <button class="nb-btn active" data-tooltip="Home"><i data-lucide="house"></i></button>
+                <button class="nb-btn" data-tooltip="Games"><i data-lucide="gamepad-2"></i></button>
+                <button class="nb-btn" data-tooltip="Browser"><i data-lucide="earth"></i></button>
+                <button class="nb-btn" data-tooltip="Movies"><i data-lucide="clapperboard"></i></button>
+                <button class="nb-btn" data-tooltip="AI"><i data-lucide="brain"></i></button>
+                <button class="nb-btn" data-tooltip="Chat"><i data-lucide="message-circle"></i></button>
+                <button class="nb-btn" data-tooltip="Settings"><i data-lucide="settings"></i></button>
+            </nav>
+            <nav class="dotbar">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </nav>
+        </div>
+        <div class="gametainer">
+            <div class="search-sec">
+                <div class="search-box">
+                    <div class="search-in-wpr">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="search games..." id="gameSearch">
+                    </div>
+                </div>
+            </div>
+            <div class="game-cont">
+                <div class="gamegrid" id="gameGrid"></div>
+                <div class="empty-state" id="emptyState" style="display:none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4M12 8h.01"></path>
+                    </svg>
+                    <p>no games found</p>
+                </div>
+            </div>
+        </div>
+
+        <iframe id="zoneFrame" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:9999;"></iframe>
+        <div id="closeGame" class="back-btn" style="display:none;" onclick="closeGame()">
+            <div class="back-btn-in">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span class="back-txt">Back</span>
+            </div>
+        </div>
+        <div id="fsBtn" class="back-btn" style="display:none;top:68px;" onclick="tglFullscreen()">
+            <div class="back-btn-in" style="pointer-events:none;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                </svg>
+                <span class="back-txt">Fullscreen</span>
+            </div>
+        </div>
+
+        <script src="./scripts/games.js"></script>
+        <script src="./scripts/main/script.js"></script>
+        <script>
+            VANTA.DOTS({
+                el: 'body',
+                color: 0x1e3a5f,
+                color2: 0x93c5fd,
+                backgroundColor: 0x101214,
+                size: 3.5,
+                spacing: 28,
+                showLines: false,
+            });
+        </script>
+    </body>
+</html>

@@ -278,47 +278,6 @@ main.home {
     border-width:3px;
 }
 
-.ctrl-btn {
-    position:absolute;
-    right:10px;
-    width:32px;
-    height:32px;
-    border-radius:50%;
-    background:#1f2123;
-    border:none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    z-index:5000;
-    transition: scale 0.15s;
-    pointer-events:auto;
-}
-
-.ctrl-btn:hover {
-    background:#2a2d30;
-}
-
-.ctrl-btn:active {
-    scale:0.9;
-}
-
-.ctrl-btn.active {
-    scale:0.8;
-    background-color:#93c5fd;
-}
-
-.ctrl-btn.active svg {
-    color:#1e3a5f;
-    stroke:#1e3a5f;
-}
-
-.ctrl-btn svg {
-    width:14px;
-    height:14px;
-    stroke:#e4e4e4;
-    stroke-width:2;
-}
 
 .ctrl-panel {
     position:fixed;
